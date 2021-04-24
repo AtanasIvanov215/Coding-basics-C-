@@ -7,6 +7,6 @@ public class Program
 {
 	public static void Main()
 	{
-		Console.WriteLine("Hello SoftUni");
+		Console.WriteLine("Hello World");
 	}
 }
