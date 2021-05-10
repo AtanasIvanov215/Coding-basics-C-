@@ -1,4 +1,4 @@
-# Coding-basics-C-
+# Coding-basics-C#
 Coding basics C#
 
 using System;
