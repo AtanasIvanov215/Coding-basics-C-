@@ -1,0 +1,13 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string Name = Console.ReadLine();
+		int project = int.Parse(Console.ReadLine());
+		int hoursofwork = project * 3;
+		Console.WriteLine($"The architect {Name} will need {hoursofwork} hours to complete {project} project/s.");
+	
+	}
+}

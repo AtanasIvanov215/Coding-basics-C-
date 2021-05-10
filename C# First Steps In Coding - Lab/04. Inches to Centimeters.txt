@@ -1,0 +1,11 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		double Inches = double.Parse(Console.ReadLine());
+			double Sm = (2.54);
+		Console.WriteLine(Inches * Sm);
+	}
+}

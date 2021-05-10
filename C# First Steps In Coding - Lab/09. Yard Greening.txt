@@ -1,0 +1,15 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		const double price = 7.61;
+			const double discount = 0.18;
+		double area = double.Parse(Console.ReadLine());
+		
+		Console.WriteLine("The final price is: " + ((area * price)-((area * price)*discount)) + " lv.");
+		Console.WriteLine("The discount is: " + ((area * price)*discount) + " lv.");
+		
+	}
+}

@@ -1,0 +1,11 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int numberOfdogs = int.Parse(Console.ReadLine());
+		int otherAnimals = int.Parse(Console.ReadLine());
+		Console.WriteLine((numberOfdogs * 2.5) + (otherAnimals * 4) + " lv.");		
+	}
+}
