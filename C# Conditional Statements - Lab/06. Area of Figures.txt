@@ -1,0 +1,40 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	string typeOffigure = Console.ReadLine();
+		if (typeOffigure == "square")
+		{
+			double sideOFsq =double.Parse(Console.ReadLine());
+			double faceOfsq = sideOFsq * sideOFsq;
+			Console.WriteLine($"{faceOfsq:f3}");
+			
+			
+		}
+		else if (typeOffigure == "circle")
+		{
+			double radiusOFcir =double.Parse(Console.ReadLine());
+			double faceOfcir = Math.PI * (radiusOFcir * radiusOFcir);
+			Console.WriteLine($"{faceOfcir:f3}");
+		}
+		else if (typeOffigure == "rectangle")
+			
+		{
+			double side1 = double.Parse(Console.ReadLine());
+			double side2 = double.Parse(Console.ReadLine());
+			double faceOfrec = side1 * side2;
+			Console.WriteLine($"{faceOfrec:f3}");
+		}
+		
+		else if (typeOffigure == "triangle")
+		{
+			double sidea = double.Parse(Console.ReadLine());
+			double sideb = double.Parse(Console.ReadLine());
+				double faceOftri = (sidea * sideb) / 2;
+						Console.WriteLine($"{faceOftri:f3}");						
+		}
+					 			
+		}			
+}

@@ -1,0 +1,39 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	const double puzzlePrice = 2.6;
+		const double speakingDPrice = 3;
+		const double teddyBPrice = 4.1;
+		const double minionPrice = 8.2;
+		const double truckPrice = 2;
+ double excursionPrice = double.Parse(Console.ReadLine());
+		int numberOfpuzz = int.Parse(Console.ReadLine());
+		int numberOfdolls = int.Parse(Console.ReadLine());
+		int numberOfBears = int.Parse(Console.ReadLine());
+		int numberOfminions = int.Parse(Console.ReadLine());
+		int numberOftrucks  = int.Parse(Console.ReadLine());
+		int numberOftoystotal = numberOfpuzz + numberOfdolls + numberOfBears + numberOfminions + numberOftrucks;
+		double totalPricetoys = (numberOfpuzz * puzzlePrice) + (numberOfdolls * speakingDPrice) + (numberOfBears * teddyBPrice) + (minionPrice * numberOfminions) + (numberOftrucks * truckPrice);
+		if (numberOftoystotal >= 50)
+		{
+		totalPricetoys = totalPricetoys - (totalPricetoys * 0.25);
+		}
+		double rentFor = totalPricetoys * 0.10;
+		double profit = totalPricetoys - rentFor;
+		double moneyLeft = profit - excursionPrice;
+		if (moneyLeft >= 0)
+		{
+			
+			Console.WriteLine(($"Yes! {moneyLeft:f2} lv left."));
+			
+		}
+		else
+		{
+		double moneyLefp = moneyLeft * -1;	
+		Console.WriteLine(($"Not enough money! {moneyLefp:f2} lv needed."));
+		 }
+	}			
+}
