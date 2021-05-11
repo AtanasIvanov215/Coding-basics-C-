@@ -1,0 +1,17 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+
+		int lenght= int.Parse(Console.ReadLine());
+int width = int.Parse(Console.ReadLine());
+		int height= int.Parse(Console.ReadLine());
+		double procent = double.Parse(Console.ReadLine()) * 0.01;
+		double volume= lenght * width * height * 0.001;
+		double waterTotal = volume * (1 - procent);
+		Console.WriteLine(waterTotal);
+	
+	}
+}

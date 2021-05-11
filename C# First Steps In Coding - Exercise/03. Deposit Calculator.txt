@@ -1,0 +1,16 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		double depositedSum = double.Parse(Console.ReadLine());
+		int time = int.Parse(Console.ReadLine());
+		double interest = double.Parse(Console.ReadLine());
+		double aquairedInterest = depositedSum * (interest/100);
+		double monthlyInterest = aquairedInterest / 12;
+		double fullAmount = depositedSum + (time * monthlyInterest);
+		Console.WriteLine(fullAmount);
+		
+	}
+}

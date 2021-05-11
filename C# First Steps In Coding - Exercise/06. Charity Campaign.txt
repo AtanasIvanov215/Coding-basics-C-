@@ -1,0 +1,26 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+
+		double cakePrice = 45;
+		double wafflePrice = 5.8;
+		double pancakePrice = 3.2;
+	int days = int.Parse(Console.ReadLine());
+		int coocks = int.Parse(Console.ReadLine());
+		int numberOfcakes = int.Parse(Console.ReadLine());
+		int numberOfwaffles = int.Parse(Console.ReadLine());
+		int numberOfpancakes = int.Parse(Console.ReadLine());
+		
+		double cakesum = cakePrice * numberOfcakes;
+		double wafflesum = wafflePrice * numberOfwaffles;
+		double pancakesum = pancakePrice * numberOfpancakes;
+		
+		double moneyPerday = (cakesum + wafflesum + pancakesum) * coocks;
+		double totalAmount = moneyPerday * days;
+		double finalA = totalAmount - (totalAmount/8);
+		Console.WriteLine(finalA);
+	}
+}

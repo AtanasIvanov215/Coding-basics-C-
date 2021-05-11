@@ -1,0 +1,24 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+
+		double qgodiCena = double.Parse(Console.ReadLine());
+		double bananaKg = double.Parse(Console.ReadLine());
+		double portokaliKg = double.Parse(Console.ReadLine());
+		double maliniKg = double.Parse(Console.ReadLine());
+		double qgodiKg = double.Parse(Console.ReadLine());
+									  double maliniCena = qgodiCena / 2;
+		double portokaliCena = maliniCena - (maliniCena * 0.4);
+		double bananiCena = maliniCena - (maliniCena * 0.8);
+		double maliniSum = maliniCena * maliniKg;
+		double bananiSum = bananaKg * bananiCena;
+		double portokaliSum = portokaliKg * portokaliCena;
+		double qgodiSum = qgodiCena * qgodiKg;
+		
+		double totalSum = maliniSum + qgodiSum + bananiSum +portokaliSum;
+		Console.WriteLine(totalSum);	
+	}
+}

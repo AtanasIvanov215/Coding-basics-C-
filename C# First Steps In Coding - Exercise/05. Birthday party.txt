@@ -1,0 +1,14 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+double rent = double.Parse(Console.ReadLine());
+		double cakePrice = 0.2 * rent;
+		double drinks = cakePrice - (cakePrice * 0.45);
+		double animator = rent / 3;
+		Console.WriteLine(rent+ cakePrice + drinks + animator);
+
+	}
+}

@@ -1,0 +1,12 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+int pages = int.Parse(Console.ReadLine());
+		double pagesPerhour = double.Parse(Console.ReadLine());
+		int numberOfdays = int.Parse(Console.ReadLine());
+		Console.WriteLine((pages/pagesPerhour) / numberOfdays);		
+	}
+}
