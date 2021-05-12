@@ -1,0 +1,161 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	
+		string produce = Console.ReadLine();
+		string dayOfweek  = Console.ReadLine();
+		double quantity1 = double.Parse(Console.ReadLine());
+		
+		switch (produce)
+		{
+			case "banana":
+				if (dayOfweek == "Monday" || dayOfweek == "Tuesday" || dayOfweek == "Wednesday" || dayOfweek == "Thursday" ||dayOfweek ==  "Friday")
+					{
+						double bananaPrice = 2.50;
+					double totalPrice = bananaPrice * quantity1;
+					Console.WriteLine($"{totalPrice:f2}");
+					}
+					
+				else if (dayOfweek == "Saturday" ||dayOfweek == "Sunday")
+				{
+					double bananaPrice1 = 2.70;
+					double totalPrice1 = bananaPrice1 * quantity1;
+					Console.WriteLine($"{totalPrice1:f2}");
+					}
+				else
+				{
+					Console.WriteLine("error");
+				}
+				break;
+				
+				case "apple":
+				if (dayOfweek == "Monday" || dayOfweek == "Tuesday" || dayOfweek == "Wednesday" || dayOfweek == "Thursday" ||dayOfweek ==  "Friday")
+					{
+						double applePrice = 1.20;
+					double totalPrice3 = applePrice * quantity1;
+					Console.WriteLine($"{totalPrice3:f2}");
+					}
+					
+				else if (dayOfweek == "Saturday" ||dayOfweek == "Sunday")
+				{
+					double applePrice1 = 1.25;
+					double totalPrice4 = applePrice1 * quantity1;
+					Console.WriteLine($"{totalPrice4:f2}");
+					}
+				else
+				{
+					Console.WriteLine("error");
+				}
+				break;
+				
+					case "orange":
+				if (dayOfweek == "Monday" || dayOfweek == "Tuesday" || dayOfweek == "Wednesday" || dayOfweek == "Thursday" ||dayOfweek ==  "Friday")
+					{
+						double orangePrice = 0.85;
+					double totalPriceor = orangePrice * quantity1;
+					Console.WriteLine($"{totalPriceor:f2}");
+					}
+					
+				else if (dayOfweek == "Saturday" ||dayOfweek == "Sunday")
+				{
+					double orangePrice1 = 0.90;
+					double totalPrice234 = orangePrice1 * quantity1;
+					Console.WriteLine($"{totalPrice234:f2}");
+					}
+				else
+				{
+					Console.WriteLine("error");
+				}
+				break;
+				
+				case "grapefruit":
+				if (dayOfweek == "Monday" || dayOfweek == "Tuesday" || dayOfweek == "Wednesday" || dayOfweek == "Thursday" ||dayOfweek ==  "Friday")
+					{
+						double grapefruitPrice = 1.45;
+					double totalPricegr = grapefruitPrice * quantity1;
+					Console.WriteLine($"{totalPricegr:f2}");
+					}
+					
+				else if (dayOfweek == "Saturday" ||dayOfweek == "Sunday")
+				{
+					double grapefruitPrice1 = 1.60;
+					double totalPrice2g34 = grapefruitPrice1 * quantity1;
+					Console.WriteLine($"{totalPrice2g34:f2}");
+					}
+				else
+				{
+					Console.WriteLine("error");
+				}
+				break;
+				
+						case "kiwi":
+				if (dayOfweek == "Monday" || dayOfweek == "Tuesday" || dayOfweek == "Wednesday" || dayOfweek == "Thursday" ||dayOfweek ==  "Friday")
+					{
+						double kiwiPrice = 2.70;
+					double totalPricekgr = kiwiPrice * quantity1;
+					Console.WriteLine($"{totalPricekgr:f2}");
+					}
+					
+				else if (dayOfweek == "Saturday" ||dayOfweek == "Sunday")
+				{
+					double kiwiPrice1 = 3.00;
+					double totalPrice2g134 = kiwiPrice1 * quantity1;
+					Console.WriteLine($"{totalPrice2g134:f2}");
+					}
+				else
+				{
+					Console.WriteLine("error");
+				}
+				break;
+				
+								case "pineapple":
+				if (dayOfweek == "Monday" || dayOfweek == "Tuesday" || dayOfweek == "Wednesday" || dayOfweek == "Thursday" ||dayOfweek ==  "Friday")
+					{
+						double pineapplePrice = 5.50;
+					double totalPricekg1r = pineapplePrice * quantity1;
+					Console.WriteLine($"{totalPricekg1r:f2}");
+					}
+					
+				else if (dayOfweek == "Saturday" ||dayOfweek == "Sunday")
+				{
+					double pineapplePrice1 = 5.60;
+					double totalPrice2g1134 = pineapplePrice1 * quantity1;
+					Console.WriteLine($"{totalPrice2g1134:f2}");
+					}
+				else
+				{
+					Console.WriteLine("error");
+				}
+				break;
+				
+									case "grapes":
+				if (dayOfweek == "Monday" || dayOfweek == "Tuesday" || dayOfweek == "Wednesday" || dayOfweek == "Thursday" ||dayOfweek ==  "Friday")
+					{
+						double grapesPrice = 3.85;
+					double totalPricekg1rg = grapesPrice * quantity1;
+					Console.WriteLine($"{totalPricekg1rg:f2}");
+					}
+					
+				else if (dayOfweek == "Saturday" ||dayOfweek == "Sunday")
+				{
+					double grapesPrice1 = 4.20;
+					double totalPrice2g1134g = grapesPrice1 * quantity1;
+					Console.WriteLine($"{totalPrice2g1134g:f2}");
+					}
+				else
+				{
+					Console.WriteLine("error");
+				}
+				break;
+				
+			default:
+				Console.WriteLine("error");
+				break;
+		}
+		
+	}
+}
+	

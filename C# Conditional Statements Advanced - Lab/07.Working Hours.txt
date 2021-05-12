@@ -1,0 +1,41 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+int number = int.Parse(Console.ReadLine());
+		string dayOftheweek = Console.ReadLine();
+		
+switch (number)
+{
+	case 10:
+	case 11:
+	case 12:
+	case 13:
+	case 14:
+	case 15:
+		case 16:
+		case 17:
+		case 18:
+		if (dayOftheweek == "Monday" || dayOftheweek == "Tuesday" || dayOftheweek == "Wednesday" ||dayOftheweek == "Thursday" ||dayOftheweek == "Friday" ||dayOftheweek == "Saturday")
+		{
+			Console.WriteLine("open");
+		}
+		else
+		{
+		Console.WriteLine("closed");	
+		}
+		break;
+		
+	default:
+	{
+		Console.WriteLine("closed");	
+		}
+		break;
+		
+}
+			
+	}
+}
+	

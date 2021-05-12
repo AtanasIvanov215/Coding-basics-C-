@@ -1,0 +1,97 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	string product1 = Console.ReadLine();
+		string city1 = Console.ReadLine();
+		double volume1 = double.Parse(Console.ReadLine());
+double price1 = 0;
+		
+switch (product1)
+{
+	case "coffee":
+		if (city1 == "Sofia")
+		{
+		price1 = 0.50;
+		}
+		else if (city1 == "Varna")
+		{
+		price1 = 0.45;
+		}
+		else
+		{
+		price1 = 0.40;
+		}
+		double totalprice = price1 *volume1;
+		Console.WriteLine(totalprice);
+		break;
+		
+	case "water":
+			if (city1 == "Sofia")
+		{
+		price1 = 0.80;
+		}
+		else
+		{
+		price1 = 0.70;
+		}
+		double totalprice1 = price1 *volume1;
+		Console.WriteLine($"{totalprice1:f2}");
+		break;	
+		case "beer":
+	if (city1 == "Sofia")
+		{
+		price1 = 1.20;
+		}
+		else if (city1 == "Varna")
+		{
+		price1 = 1.10;
+		}
+		else
+		{
+		price1 = 1.15;
+		}
+		double totalprice2 = price1 *volume1;
+		Console.WriteLine($"{totalprice2:f2}");
+		break;
+	case "sweets":
+	if (city1 == "Sofia")
+		{
+		price1 = 1.45;
+		}
+		else if (city1 == "Varna")
+		{
+		price1 = 1.35;
+		}
+		else
+		{
+		price1 = 1.30;
+		}
+		double totalprice3 = price1 *volume1;
+		Console.WriteLine($"{totalprice3:f2}");
+		break;
+	case "peanuts":
+	if (city1 == "Sofia")
+		{
+		price1 = 1.60;
+		}
+		else if (city1 == "Varna")
+		{
+		price1 = 1.55;
+		}
+		else
+		{
+		price1 = 1.50;
+		}
+		double totalprice4 = price1 *volume1;
+		Console.WriteLine($"{totalprice4:f2}");
+		break;
+	default:
+		Console.WriteLine("Error");
+		break;
+			
+}
+	}
+}

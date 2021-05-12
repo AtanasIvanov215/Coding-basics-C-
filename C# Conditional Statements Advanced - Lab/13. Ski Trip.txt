@@ -1,0 +1,149 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	
+	double room1Price = 18.00;
+	double apartamentPrice = 25.00;	
+	double presApartPrice = 35.00;
+	
+		int daysOfvac = int.Parse(Console.ReadLine());
+		string typeOfroom = Console.ReadLine();
+		string evaluation = Console.ReadLine();
+		
+	double nightsSpent = daysOfvac - 1;
+		
+		switch (typeOfroom)
+		{	
+			case "room for one person":
+		
+		if (evaluation == "negative")
+		{
+			double totalprice = nightsSpent * room1Price;
+			double totalpricefull = totalprice - (totalprice * 0.10);
+			Console.WriteLine($"{totalpricefull:f2}");
+		}
+		else if (evaluation == "positive")
+		{
+		double totalprice = nightsSpent * room1Price;
+			double totalpricefull = totalprice + (totalprice * 0.25);
+			Console.WriteLine($"{totalpricefull:f2}");	
+		}
+		break;
+				
+			case "apartment":				
+	if(daysOfvac < 10 && evaluation == "negative")
+	{
+		double totalprice = nightsSpent * apartamentPrice;
+			double totalpricefull = totalprice - (totalprice * 0.30);
+		double totalpricefull1 = totalpricefull - (totalpricefull * 0.10);
+			Console.WriteLine($"{totalpricefull1:f2}");		
+	}
+	else if (daysOfvac < 10 && evaluation == "positive")	
+	{
+		double totalprice = nightsSpent * apartamentPrice;
+			double totalpricefull = totalprice - (totalprice * 0.30);
+		double totalpricefull1 = totalpricefull + (totalpricefull * 0.25);
+			Console.WriteLine($"{totalpricefull1:f2}");		
+	}
+		
+	else if(daysOfvac >= 10 && 15 >= daysOfvac && evaluation == "negative")
+	{
+		double totalprice = nightsSpent * apartamentPrice;
+			double totalpricefull = totalprice - (totalprice * 0.35);
+			double totalpricefull1 = totalpricefull - (totalpricefull * 0.10);
+			Console.WriteLine($"{totalpricefull1:f2}");
+	}			
+	else if (daysOfvac >= 10 && 15 >= daysOfvac && evaluation == "positive")
+		{
+		double totalprice = nightsSpent * apartamentPrice;
+			double totalpricefull = totalprice - (totalprice * 0.35);
+			double totalpricefull1 = totalpricefull + (totalpricefull * 0.25);
+			Console.WriteLine($"{totalpricefull1:f2}");
+	}	
+		else if(daysOfvac > 15 && evaluation == "negative")
+	{
+		double totalprice = nightsSpent * apartamentPrice;
+			double totalpricefull = totalprice - (totalprice * 0.5);
+			double totalpricefull1 = totalpricefull - (totalpricefull * 0.10);
+			Console.WriteLine($"{totalpricefull1:f2}");		
+	}	
+		else if( daysOfvac > 15  && evaluation == "positive")
+				
+	{
+		double totalprice = nightsSpent * apartamentPrice;
+			double totalpricefull = totalprice - (totalprice * 0.5);
+			double totalpricefull1 = totalpricefull + (totalpricefull * 0.25);
+			Console.WriteLine($"{totalpricefull1:f2}");		
+	}			
+		
+	else
+		{
+	Console.WriteLine("error");	
+	}
+		break;
+				
+					case "president apartment":				
+	
+			if( daysOfvac > 15 && evaluation == "negative")
+	{
+		double totalprice = nightsSpent * presApartPrice;
+			double totalpricefull = totalprice - (totalprice * 0.2);
+			double totalpricefull1 = totalpricefull - (totalpricefull * 0.10);
+			Console.WriteLine($"{totalpricefull1:f2}");		
+	}	
+		else if(daysOfvac > 15 && evaluation == "positive")
+				
+	{
+		double totalprice = nightsSpent * presApartPrice;
+			double totalpricefull = totalprice - (totalprice * 0.2);
+			double totalpricefull1 = totalpricefull + (totalpricefull * 0.25);
+			Console.WriteLine($"{totalpricefull1:f2}");		
+	}	
+	else if(daysOfvac >= 10 && 15 >= daysOfvac && evaluation == "negative")
+	{
+		double totalprice = nightsSpent * presApartPrice;
+			double totalpricefull = totalprice - (totalprice * 0.15);
+			double totalpricefull1 = totalpricefull - (totalpricefull * 0.10);
+			Console.WriteLine($"{totalpricefull1:f2}");
+	}			
+	else if (daysOfvac >= 10 && 15 >= daysOfvac && evaluation == "positive")
+		{
+		double totalprice = nightsSpent * presApartPrice;
+			double totalpricefull = totalprice - (totalprice * 0.15);
+			double totalpricefull1 = totalpricefull + (totalpricefull * 0.25);
+			Console.WriteLine($"{totalpricefull1:f2}");
+	}	
+
+	else if(daysOfvac < 10 && evaluation == "negative")
+	{
+		double totalprice = nightsSpent * presApartPrice;
+			double totalpricefull = totalprice - (totalprice * 0.10);
+		double totalpricefull1 = totalpricefull - (totalpricefull * 0.10);
+			Console.WriteLine($"{totalpricefull1:f2}");		
+	}
+	else if (daysOfvac < 10 && evaluation == "positive")	
+	{
+		double totalprice = nightsSpent * presApartPrice;
+			double totalpricefull = totalprice - (totalprice * 0.10);
+		double totalpricefull1 = totalpricefull + (totalpricefull * 0.25);
+			Console.WriteLine($"{totalpricefull1:f2}");		
+	}
+					
+		
+	else
+		{
+	Console.WriteLine("error");	
+	}
+		break;
+				
+				
+				
+			default:
+				Console.WriteLine("error");	
+				break;
+		}
+	}
+}

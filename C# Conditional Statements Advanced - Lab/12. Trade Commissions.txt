@@ -1,0 +1,99 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	
+	string city1 = Console.ReadLine();
+	double sales1 = double.Parse(Console.ReadLine());
+		
+		switch (city1)
+		{
+			case "Sofia":
+					if (sales1 > 10000)
+					{
+						double commission = sales1 * 0.12;
+						Console.WriteLine($"{commission:f2}");
+					}
+				else if (sales1 <= 10000 && sales1 > 1000)
+				{
+					double commission = sales1 * 0.08;
+						Console.WriteLine($"{commission:f2}");
+				}
+				else if (sales1 <= 1000 && sales1 > 500)
+				{
+				double commission = sales1 * 0.07;
+						Console.WriteLine($"{commission:f2}");
+				}
+				else if (sales1 <= 500 && sales1 >= 0)
+				{
+				double commission = sales1 * 0.05;
+						Console.WriteLine($"{commission:f2}");
+				}
+				else
+				{
+					Console.WriteLine("error");
+				}
+				break;
+				
+				case "Varna":
+					if (sales1 > 10000)
+					{
+						double commission = sales1 * 0.13;
+						Console.WriteLine($"{commission:f2}");
+					}
+				else if (sales1 <= 10000 && sales1 > 1000)
+				{
+					double commission = sales1 * 0.10;
+						Console.WriteLine($"{commission:f2}");
+				}
+				else if (sales1 <= 1000 && sales1 > 500)
+				{
+				double commission = sales1 * 0.075;
+						Console.WriteLine($"{commission:f2}");
+				}
+				else if (sales1 <= 500 && sales1 >= 0)
+				{
+				double commission = sales1 * 0.045;
+						Console.WriteLine($"{commission:f2}");
+				}
+				else
+				{
+					Console.WriteLine("error");
+				}
+				break;
+				
+				case "Plovdiv":
+					if (sales1 > 10000)
+					{
+						double commission = sales1 * 0.145;
+						Console.WriteLine($"{commission:f2}");
+					}
+				else if (sales1 <= 10000 && sales1 > 1000)
+				{
+					double commission = sales1 * 0.12;
+						Console.WriteLine($"{commission:f2}");
+				}
+				else if (sales1 <= 1000 && sales1 > 500)
+				{
+				double commission = sales1 * 0.08;
+						Console.WriteLine($"{commission:f2}");
+				}
+				else if (sales1 <= 500 && sales1 >= 0)
+				{
+				double commission = sales1 * 0.055;
+						Console.WriteLine($"{commission:f2}");
+				}
+				else
+				{
+					Console.WriteLine("error");
+				}
+				break;
+				
+			default:
+				Console.WriteLine("error");
+				break;
+		}			
+	}
+}
