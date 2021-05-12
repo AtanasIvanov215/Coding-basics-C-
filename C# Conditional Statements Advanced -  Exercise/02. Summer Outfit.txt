@@ -1,0 +1,63 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	double degrees1 = double.Parse(Console.ReadLine());
+		string timeOfday = Console.ReadLine();
+		string outfit = "";
+		string shoes = "";
+		
+		if (degrees1 >=10 && degrees1 <=18)
+		{
+			if(timeOfday == "Morning")
+		{
+			outfit = "Sweatshirt";
+			shoes = "Sneakers";
+		}
+		else if (timeOfday == "Afternoon" || timeOfday == "Evening")
+		{
+			outfit = "Shirt";
+			shoes = "Moccasins";
+		}
+		Console.WriteLine($"It's {degrees1} degrees, get your {outfit} and {shoes}.");
+		}	
+			if (degrees1 > 18 && degrees1 <=24)
+			{
+				if(timeOfday == "Afternoon")
+		{
+			outfit = "T-Shirt";
+			shoes = "Sandals";
+		}
+		else if (timeOfday == "Morning" || timeOfday == "Evening")
+		{
+			outfit = "Shirt";
+			shoes = "Moccasins";
+		}
+		Console.WriteLine($"It's {degrees1} degrees, get your {outfit} and {shoes}.");
+			}
+		
+		
+					if (degrees1 >= 25)
+			{
+				if(timeOfday == "Afternoon")
+		{
+			outfit = "Swim Suit";
+			shoes = "Barefoot";
+		}
+		else if (timeOfday == "Morning")
+		{
+			outfit = "T-Shirt";
+			shoes = "Sandals";
+		}
+		else if (timeOfday == "Evening")
+		{
+			outfit = "Shirt";
+			shoes = "Moccasins";
+		}
+		Console.WriteLine($"It's {degrees1} degrees, get your {outfit} and {shoes}.");
+			}
+		
+	}
+}

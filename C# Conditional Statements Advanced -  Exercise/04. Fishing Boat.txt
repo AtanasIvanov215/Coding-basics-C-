@@ -1,0 +1,60 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	const int springPrice = 3000;
+	const int sumerautumPrice = 4200;	
+	const int wintPrice = 2600;	
+		
+	int bugdet1 = int.Parse(Console.ReadLine());
+	string season = Console.ReadLine();
+	int numberOffisherman = int.Parse(Console.ReadLine());
+	double totalMoney = 0;
+		
+		switch (season)
+		{
+			case "Spring":
+		totalMoney = springPrice;
+		break;
+		case "Summer":
+		totalMoney = sumerautumPrice;
+		break;
+		case "Autumn":
+		totalMoney = sumerautumPrice;
+		break;
+				case "Winter":
+		totalMoney = wintPrice;
+		break;
+		}
+	if (numberOffisherman <= 6)
+	{
+		totalMoney -= totalMoney * 0.10;
+	}
+		else if (numberOffisherman <=11 && numberOffisherman >= 7)
+		{
+		totalMoney -= totalMoney * 0.15;	
+		}
+		else if (numberOffisherman >= 12)
+		{
+		totalMoney -= totalMoney * 0.25;	
+		}
+		
+		if ( numberOffisherman % 2 == 0 && season != "Autumn")
+		{
+			totalMoney -= totalMoney * 0.05;
+		}
+		if ( bugdet1 >= totalMoney)
+		{
+			double moneyLeft = bugdet1 - totalMoney;
+			Console.WriteLine($"Yes! You have {moneyLeft:f2} leva left.");
+		}
+		else if ( bugdet1 < totalMoney)
+		{
+			double moneyNeeded = totalMoney - bugdet1;
+			Console.WriteLine($"Not enough money! You need {moneyNeeded:f2} leva.");
+		}
+			
+}
+}

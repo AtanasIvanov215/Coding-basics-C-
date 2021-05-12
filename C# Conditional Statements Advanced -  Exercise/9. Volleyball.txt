@@ -1,0 +1,26 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	string year = Console.ReadLine();
+	int holydays = int.Parse(Console.ReadLine());
+	int weekends = int.Parse(Console.ReadLine());
+		
+	double weekinSofia = 48 - weekends;
+	double weekPlay = weekinSofia * 3.0/4.0;
+	double holydayinSofia1 = holydays * 2.0/3.0;
+		double plays = holydayinSofia1 + weekPlay + weekends;
+		if(year == "leap")
+		{
+			plays *= 1.15;
+			Console.WriteLine(Math.Floor(plays));
+		}
+		else
+		{
+			Console.WriteLine(Math.Floor(plays));
+		}
+		
+        }
+}

@@ -1,0 +1,89 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	double number1 = double.Parse(Console.ReadLine());
+	double number2 = double.Parse(Console.ReadLine());
+	
+	string operator1 = Console.ReadLine();
+		
+	switch (operator1)
+	{
+		case "+":
+		double sumofNum = number1 + number2;
+			if (sumofNum % 2 ==0)
+			{
+				Console.WriteLine($"{number1} + {number2} = {sumofNum} - even");
+			}
+			else
+			{
+			Console.WriteLine($"{number1} + {number2} = {sumofNum} - odd");
+			}	
+			break;	
+			case "-":
+		double sumofNum1 = number1 - number2;
+			if (sumofNum1 % 2 == 0)
+			{
+				Console.WriteLine($"{number1} - {number2} = {sumofNum1} - even");
+			}
+			else
+			{
+			Console.WriteLine($"{number1} - {number2} = {sumofNum1} - odd");
+			}	
+			break;
+			
+				case "*":
+		double sumofNum2 = number1 * number2;
+			
+			if (sumofNum2 % 2 == 0)
+			{
+				Console.WriteLine($"{number1} * {number2} = {sumofNum2} - even");
+			}
+			else 
+			{
+			Console.WriteLine($"{number1} * {number2} = {sumofNum2} - odd");
+			}	
+			break;
+			
+			case "/":
+		
+			if(number1 == 0)
+			{
+				Console.WriteLine($"Cannot divide {number2} by zero");
+			}
+			else if (number2 == 0)
+					{
+				Console.WriteLine($"Cannot divide {number1} by zero");
+			}
+			else 
+			{
+				double sumofNum3 = number1 / number2;
+			Console.WriteLine($"{number1} / {number2} = {sumofNum3:f2}");
+			}	
+			break;
+			
+			case "%":
+					
+			if(number1 == 0)
+			{
+				Console.WriteLine($"Cannot divide {number2} by zero");
+			}
+			else if (number2 == 0)
+					{
+				Console.WriteLine($"Cannot divide {number1} by zero");
+			}
+			else if (number1 != 0 && number2 != 0) 
+			{
+				double sumofNum4 = number1 % number2;
+			
+			
+			Console.WriteLine($"{number1} % {number2} = {sumofNum4:f0}");
+				
+			}
+			break;
+	}
+		
+	}	
+}

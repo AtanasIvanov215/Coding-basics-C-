@@ -1,0 +1,37 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	double premierPrice = 12.00;
+	double normalPrice = 7.50;
+	double discPrice = 5.00;
+		
+		string typeOfticket = Console.ReadLine();
+		int rows1 = int.Parse(Console.ReadLine());
+		int columns1 = int.Parse(Console.ReadLine());
+		
+switch (typeOfticket)
+{
+	case "Premiere":
+		double allSeats = rows1 * columns1;
+		double allPrice = allSeats * premierPrice;
+		Console.WriteLine($"{allPrice:f2}");
+		break;
+	case "Normal":
+		double allSeats1 = rows1 * columns1;
+		double allPrice1 = allSeats1 * normalPrice;
+		Console.WriteLine($"{allPrice1:f2}");
+		break;	
+	case "Discount":
+		double allSeats2 = rows1 * columns1;
+		double allPrice2 = allSeats2 * discPrice;
+		Console.WriteLine($"{allPrice2:f2}");
+		break;	
+		default:
+		Console.WriteLine("error");
+			break;
+	}
+	}
+}
