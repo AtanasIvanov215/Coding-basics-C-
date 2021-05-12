@@ -1,0 +1,28 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		double recordTime = double.Parse(Console.ReadLine());
+		double metres = double.Parse(Console.ReadLine());
+		double swiming1m = double.Parse(Console.ReadLine());
+		
+		double swimingtime = metres * swiming1m;
+		double deley1 = Math.Floor( metres / 15);
+		double timeOfdelay = deley1 * 12.5;
+		double totaltime = swimingtime + timeOfdelay;
+		
+		if (totaltime >= recordTime)
+		{
+			double timeneeded = totaltime - recordTime;
+			Console.WriteLine(($"No, he failed! He was {timeneeded:f2} seconds slower."));
+		}
+		else
+		{
+			
+		Console.WriteLine(($"Yes, he succeeded! The new world record is {totaltime:f2} seconds."));
+			
+		}
+	}
+}

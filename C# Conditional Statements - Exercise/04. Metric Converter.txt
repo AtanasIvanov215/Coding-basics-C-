@@ -1,0 +1,41 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+double number = double.Parse(Console.ReadLine());
+		string value1 = Console.ReadLine();
+		string value2 = Console.ReadLine();
+		 if (value1 == "mm" && value2 == "m")
+		 {
+			 double number1 = number / 1000;
+			Console.WriteLine($"{number1:f3}");
+		 }
+		else if(value1 == "m" && value2 == "mm")
+		{
+		 double number4 = number * 1000;
+			Console.WriteLine($"{number4:f3}");
+		 }	
+		else if (value1 == "m" && value2 == "cm")
+		{
+			double number2 = number * 100;
+			Console.WriteLine($"{number2:f3}");
+		}
+		else if (value1 == "cm" && value2 == "m")
+		{
+				double number5 = number / 100;
+			Console.WriteLine($"{number5:f3}");
+		}
+		else if ( value1 == "cm" && value2 == "mm")
+		{
+			double number3 = number * 10;
+			Console.WriteLine($"{number3:f3}");
+			}	
+		else if  ( value1 == "mm" && value2 == "cm")
+		{
+		double number7 = number / 10;
+			Console.WriteLine($"{number7:f3}");
+			}		
+	}
+}

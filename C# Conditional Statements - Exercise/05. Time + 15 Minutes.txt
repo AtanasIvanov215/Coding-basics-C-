@@ -1,0 +1,39 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+ int hours = int.Parse(Console.ReadLine());
+		int minutes = int.Parse(Console.ReadLine());
+		
+		if ((minutes +15) == 60)			
+		{
+		int minutes4 = 00;
+			int fulhours2 = (hours + 1);
+			if (fulhours2 >23)
+			{
+				fulhours2 = 0;
+			}
+			Console.WriteLine(($"{fulhours2}:{minutes4:d2}"));
+		}
+		
+		else if (minutes + 15 > 60)
+		{
+			int fullminutes = (minutes +15) - 60;
+			int fulhours = (hours + 1);
+			if (fulhours >23)
+			{
+				fulhours = 0;
+			}
+			Console.WriteLine($"{fulhours}:{fullminutes:d2}");
+		}
+
+		
+		else
+		{
+			int fullminutes1 = (minutes +15);
+			Console.WriteLine(($"{hours}:{fullminutes1:d2}"));
+			}
+	}
+}

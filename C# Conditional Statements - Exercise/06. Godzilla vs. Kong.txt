@@ -1,0 +1,31 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		double filmBugdet = double.Parse(Console.ReadLine());
+		int numberOfstat = int.Parse(Console.ReadLine());
+double dressPrice =  double.Parse(Console.ReadLine());
+		
+		double filmDecor = filmBugdet * 0.1;
+if (numberOfstat >= 150)
+{
+	dressPrice = dressPrice- (dressPrice*0.1);
+}
+	double totalDress = numberOfstat * dressPrice;
+		double totalSpending = totalDress + filmDecor;
+		double moneyLeft = filmBugdet - totalSpending;
+		if ( moneyLeft >= 0)
+		{
+			Console.WriteLine($"Action!");
+			Console.WriteLine($"Wingard starts filming with {moneyLeft:f2} leva left.");
+							  
+		}
+		else
+		{
+			Console.WriteLine($"Not enough money!");
+			Console.WriteLine($"Wingard needs {(moneyLeft * -1):f2} leva more.");			
+		}		
+	}
+}
