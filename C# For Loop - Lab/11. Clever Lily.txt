@@ -1,0 +1,44 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+		int age  = int.Parse(Console.ReadLine());
+
+		double washingCost  = double.Parse(Console.ReadLine());
+
+		double toysPrice  = double.Parse(Console.ReadLine());
+double totalMoney = 0;
+		double birtdayMoney = 10;
+		int toys = 0;
+		
+		
+		for( int i=1; i<=age; i++)
+		{
+			if (i % 2==0)
+			{
+				totalMoney += birtdayMoney;
+				birtdayMoney += 10;
+				totalMoney -=1;
+			}
+	
+			else
+			{
+			toys +=1;	
+			}
+		}
+		totalMoney += toys * toysPrice;
+			if(washingCost <= totalMoney)
+			{
+				Console.WriteLine($"Yes! {totalMoney-washingCost:f2}");
+			}
+		else
+		{
+			Console.WriteLine($"No! {washingCost - totalMoney:f2}");
+		}
+
+		
+		}
+	}	

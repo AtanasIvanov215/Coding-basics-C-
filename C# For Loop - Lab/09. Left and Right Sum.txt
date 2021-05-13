@@ -1,0 +1,31 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int number  = int.Parse(Console.ReadLine());
+		int leftsum = 0;
+		int rightsum = 0;
+		for( int i=1; i<=number; i++)
+		{
+			leftsum = leftsum + int.Parse(Console.ReadLine());
+					
+		}
+		for( int i=1; i<=number; i++)
+		{
+			rightsum = rightsum + int.Parse(Console.ReadLine());
+					
+		}
+		if (leftsum == rightsum)
+		{
+Console.WriteLine("Yes, sum = " + leftsum);
+		}
+else
+{
+int diff = Math.Abs(rightsum - leftsum);
+
+Console.WriteLine("No, diff = " + diff);
+}
+}
+}
