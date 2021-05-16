@@ -1,0 +1,30 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+int cakelengt = int.Parse(Console.ReadLine());
+		int cakewidht = int.Parse(Console.ReadLine());
+		int totalcake = cakelengt * cakewidht;
+		int piecetaken = 0;
+		while (piecetaken <= totalcake)
+		{
+			string piecetaken1 = Console.ReadLine();
+			if(piecetaken1 == "STOP")
+			{
+				int peaceleft = totalcake - piecetaken;
+				Console.WriteLine($"{peaceleft} pieces are left.");
+				break;
+			}
+			int p222 = int.Parse(piecetaken1);
+			piecetaken += p222;
+			
+		}
+		if(piecetaken>=totalcake)
+		{
+			int cakeneed = piecetaken - totalcake;
+			Console.WriteLine($"No more cake left! You need {cakeneed} pieces more.");
+		}
+	}
+}

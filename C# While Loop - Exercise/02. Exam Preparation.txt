@@ -1,0 +1,41 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	int isfaultesh = int.Parse(Console.ReadLine());
+		int failtime=0;
+		int solveprobl=0;
+	double gradesum=0;
+		string lastprb ="";
+		bool isfail = true;
+		while (failtime <isfaultesh)
+		{
+			string probname = Console.ReadLine();
+			if (probname == "Enough")
+			{
+				isfail = false;
+				break;
+			}
+			int grade = int.Parse(Console.ReadLine());
+			if(grade <=4)
+			{
+				failtime++;
+			}
+			gradesum +=grade;
+			solveprobl++;
+			lastprb = probname;
+		}
+		if(isfail)
+		{
+			Console.WriteLine($"You need a break, {failtime} poor grades.");
+		}
+		else
+		{
+		Console.WriteLine($"Average score: {gradesum/solveprobl:F2}");
+			Console.WriteLine($"Number of problems: {solveprobl}");
+				Console.WriteLine($"Last problem: {lastprb}");
+		}
+}
+}
