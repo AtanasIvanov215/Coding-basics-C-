@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+					
+public class Program
+{
+	public static void Main()
+	{
+		List<string> destinations = new List<string>();
+		double sumNeeded = 0;
+		string country = "";
+		double sum = 0;
+		while(true)
+		{
+			string input = Console.ReadLine();
+			if(input =="End")
+			{
+				break;
+			}
+			
+			double number;
+			
+			bool success = Double.TryParse(input, out number);
+			
+			if(!success)
+			{
+				country = input;
+				sumNeeded = double.Parse(Console.ReadLine());	
+				sum=0;
+			}
+			else
+		{
+				sum += double.Parse(input);
+				if(sum >= sumNeeded)
+				{
+					destinations.Add(country);
+				 }
+		}
+			
+	}
+		foreach( var element in destinations)
+		{
+			Console.WriteLine($"Going to {element}!");
+		}
+	}
+}

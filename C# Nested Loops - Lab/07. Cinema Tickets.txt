@@ -1,0 +1,98 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+				double totalTickets = 0;
+		double ticketNum = 0;
+		double kidsTickets = 0;
+		double studentTickets = 0;
+		double standartTickets = 0;
+		bool keepLooping = true;
+		while(keepLooping)
+		{
+			string input = Console.ReadLine();
+			if(input == "Finish")
+				break;
+			
+			string movie = input;
+			double capacity = double.Parse(Console.ReadLine());
+			double cap = capacity;
+			while(cap > 0)
+			{
+				string input1 = Console.ReadLine();
+				if(input1 == "kid")
+				{
+					ticketNum++;
+					kidsTickets++;
+					totalTickets++;
+				}
+				else if(input1 == "student")
+				{
+					studentTickets++;
+					ticketNum++;
+					totalTickets++;
+				}
+				else if(input1 == "standard")
+				{
+					ticketNum++;
+					standartTickets++;
+					totalTickets++;
+				}
+			if(input1 == "End")
+			{
+				if(ticketNum  == capacity)
+				{
+					Console.WriteLine($"{movie} - 100.00% full.");
+				}
+				else
+				{
+					double percent = (ticketNum / capacity) *100;
+					Console.WriteLine($"{movie} - {percent:f2}% full.");
+				}
+				ticketNum = 0;
+				break;
+			}
+				if(input1 == "Finish")
+				{
+					if(ticketNum  == capacity)
+				{
+					Console.WriteLine($"{movie} - 100.00% full.");
+				}
+				else
+				{
+					double percent = (ticketNum / capacity) *100;
+					Console.WriteLine($"{movie} - {percent:f2}% full.");
+				}
+				ticketNum = 0;
+					keepLooping = false;
+					break;
+				}
+				if(cap == 1)
+				{
+					if(ticketNum  == capacity)
+				{
+					Console.WriteLine($"{movie} - 100.00% full.");
+				}
+				else
+				{
+					double percent = (ticketNum / capacity) *100;
+					Console.WriteLine($"{movie} - {percent:f2}% full.");
+				}
+				ticketNum = 0;
+				break;
+				}
+				cap--;
+			}
+			
+		}
+		Console.WriteLine($"Total tickets: {totalTickets}");
+		double kidTotal =  (kidsTickets / totalTickets) *100;
+		double studentTotal =  (studentTickets / totalTickets) *100;
+		double standartTotal =  (standartTickets / totalTickets) *100;
+		Console.WriteLine($"{studentTotal:f2}% student tickets.");
+		Console.WriteLine($"{standartTotal:f2}% standard tickets.");
+		Console.WriteLine($"{kidTotal:f2}% kids tickets.");
+	}
+}

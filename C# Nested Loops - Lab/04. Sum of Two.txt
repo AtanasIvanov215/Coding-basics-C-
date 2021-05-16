@@ -1,0 +1,31 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int magicnumber= 0;
+int firstnumber = int.Parse(Console.ReadLine());
+		int secondnumber = int.Parse(Console.ReadLine());
+		int magicnum = int.Parse(Console.ReadLine());
+		bool isMagicNumberFound = false;
+		for( int x1= firstnumber; x1 <= secondnumber; x1++)
+		{
+			for( int x2 = firstnumber; x2 <= secondnumber; x2++)
+			{
+				magicnumber++;
+				if( (x1 + x2) == magicnum)
+				{
+					isMagicNumberFound = true;
+					Console.WriteLine($"Combination N:{magicnumber} ({x1} + {x2} = {magicnum})");
+					return;
+				}
+			}
+			
+		}
+		if (!isMagicNumberFound)
+            {
+                Console.WriteLine($"{magicnumber} combinations - neither equals {magicnum}");
+            }
+	}
+}
