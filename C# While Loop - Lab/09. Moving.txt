@@ -1,0 +1,33 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int width = int.Parse(Console.ReadLine());
+		int lenght = int.Parse(Console.ReadLine());
+		int hight = int.Parse(Console.ReadLine());
+		double totalvolume = width*lenght*hight;
+		double boxesvolume= 0;
+		
+string completion = Console.ReadLine();
+		while(completion != "Done")
+		{
+			double boxes = double.Parse(completion);
+			boxesvolume +=boxes;
+	if(boxesvolume >totalvolume)
+	{
+		double spacenned= boxesvolume-totalvolume;
+		Console.WriteLine($"No more free space! You need {spacenned} Cubic meters more.");
+		break;
+	}
+		
+			completion= Console.ReadLine();
+		}
+		if(totalvolume>boxesvolume)
+		{
+		double finalvolume = totalvolume -boxesvolume; 
+		Console.WriteLine($"{finalvolume} Cubic meters left.");
+		}
+}
+}

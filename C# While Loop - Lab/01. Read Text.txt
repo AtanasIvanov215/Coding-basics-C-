@@ -1,0 +1,17 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+while(true)
+{
+	string word = Console.ReadLine();
+	if(word =="Stop")
+	{
+		break;
+	}
+	Console.WriteLine(word);
+}
+	}		
+}

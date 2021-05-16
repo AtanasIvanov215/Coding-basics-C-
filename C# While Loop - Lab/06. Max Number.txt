@@ -1,0 +1,20 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+string number = Console.ReadLine();
+		int maxnum = int.MinValue;
+	while(	number != "Stop")
+	{
+		int num = int.Parse(number);
+		if(maxnum < num)
+		{
+			maxnum=num;
+		}
+		number = Console.ReadLine();
+	}
+		Console.WriteLine(maxnum);
+}
+}
