@@ -1,0 +1,75 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		double evensum =0;
+			double evenmax =double.MinValue;
+		double evenmin =double.MaxValue;
+		double oddsum =0;
+			double oddmax =double.MinValue;
+		double oddmin =double.MaxValue;
+int n = int.Parse(Console.ReadLine());
+
+		for( int i=0; i<n; i++)
+		{
+			double num = double.Parse(Console.ReadLine());
+		
+			
+		
+if ( i % 2 == 1 )
+{
+	evensum += num;
+	if(num > evenmax)
+	{
+		evenmax  = num;
+	}
+	if ( num < evenmin)
+	{
+		evenmin = num;
+	}
+	
+
+}
+			else if (i % 2 == 0)
+			{
+				oddsum += num;
+	if(num > oddmax)
+	{
+		oddmax  = num;
+	}
+	if ( num < oddmin)
+	{
+		oddmin = num;
+	}
+	
+				
+			}
+			
+		}
+		Console.WriteLine($"OddSum={oddsum:f2},");
+		if(oddsum == 0)
+		   {
+			   Console.WriteLine($"OddMin=No,");
+		Console.WriteLine($"OddMax=No,");
+		   }
+			else   
+		   {
+		Console.WriteLine($"OddMin={oddmin:f2},");
+		Console.WriteLine($"OddMax={oddmax:f2},");
+		   }
+		Console.WriteLine($"EvenSum={evensum:f2},");
+		if(evensum == 0)
+		{
+			Console.WriteLine($"EvenMin=No,");
+			Console.WriteLine($"EvenMax=No");
+		}
+		else
+		{
+		Console.WriteLine($"EvenMin={evenmin:f2},");
+			Console.WriteLine($"EvenMax={evenmax:f2}");
+		}	
+			
+	}		
+}
