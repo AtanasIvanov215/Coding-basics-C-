@@ -1,0 +1,31 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+int n = int.Parse(Console.ReadLine());
+		double overal = 0;
+		double total = 0;
+		int counter = 0;
+		while(true)
+		{
+			string subject = Console.ReadLine();
+			if(subject == "Finish")
+			{
+				break;
+			}
+			for(int j = 0; j < n; j++)
+			{
+				double grade = double.Parse(Console.ReadLine());
+				overal +=grade;
+				total += grade;
+				counter++;
+			}
+			overal /= n;
+			Console.WriteLine($"{subject} - {overal:f2}.");
+			overal=0;
+		}
+		Console.WriteLine($"Student's final assessment is {(total / counter):f2}.");
+		}
+	}

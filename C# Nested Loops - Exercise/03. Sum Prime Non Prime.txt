@@ -1,0 +1,51 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int primeSum = 0;
+		int nonPrimeSum = 0;
+		int counter = 0;
+		bool isOK = true;
+	while(true)
+	{
+		string input =Console.ReadLine();
+		
+		if(input == "stop")
+		{
+			break;
+		}
+		int num = int.Parse(input);
+		if(num < 0)
+			{
+				Console.WriteLine("Number is negative.");
+			continue;
+			}
+		
+		for( int i = 2; i <= num; i++)
+		{
+			
+			if(   num != i && num % i == 0 )
+			{
+				nonPrimeSum += num;
+				isOK=false;
+				break;
+			}
+			else
+			{
+				isOK = true;
+				
+			}
+			
+			
+		}
+		if(isOK)
+			{
+				primeSum +=num;
+			}
+	}
+Console.WriteLine($"Sum of all prime numbers is: {primeSum}");
+		Console.WriteLine($"Sum of all non prime numbers is: {nonPrimeSum}");
+	}
+}
